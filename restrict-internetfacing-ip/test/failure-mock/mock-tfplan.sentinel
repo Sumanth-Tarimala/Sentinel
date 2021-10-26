@@ -1,0 +1,269 @@
+import "strings"
+import "types"
+
+_modules = {
+	"root": {
+		"data": {},
+		"path": [],
+		"resources": {
+			"google_compute_firewall": {
+				"rules": {
+					0: {
+						"applied": {
+							"allow": [
+								{
+									"ports": [
+										"80",
+									],
+									"protocol": "tcp",
+								},
+							],
+							"deny":        [],
+							"description": "Creates ingress rule facing the internet",
+							"direction":   "INGRESS",
+							"disabled":    null,
+							"log_config":  [],
+							"name":        "my-firewall-rule",
+							"network":     "default",
+							"priority":    1000,
+							"project":     "my-project-name",
+							"source_ranges": [
+								"10.36.87.1/32",
+							],
+							"source_service_accounts": null,
+							"source_tags":             null,
+							"target_service_accounts": null,
+							"target_tags":             null,
+							"timeouts":                null,
+						},
+						"destroy": false,
+						"diff": {
+							"allow.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"allow.0.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"allow.0.ports.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"allow.0.ports.0": {
+								"computed": false,
+								"new":      "80",
+								"old":      "",
+							},
+							"allow.0.protocol": {
+								"computed": false,
+								"new":      "tcp",
+								"old":      "",
+							},
+							"creation_timestamp": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"deny.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"description": {
+								"computed": false,
+								"new":      "Creates ingress rule facing the internet",
+								"old":      "",
+							},
+							"destination_ranges.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"direction": {
+								"computed": false,
+								"new":      "INGRESS",
+								"old":      "",
+							},
+							"disabled": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"enable_logging": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"log_config.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"name": {
+								"computed": false,
+								"new":      "my-firewall-rule",
+								"old":      "",
+							},
+							"network": {
+								"computed": false,
+								"new":      "default",
+								"old":      "",
+							},
+							"priority": {
+								"computed": false,
+								"new":      "1000",
+								"old":      "",
+							},
+							"project": {
+								"computed": false,
+								"new":      "my-project-name",
+								"old":      "",
+							},
+							"self_link": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"source_ranges.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"source_ranges.0": {
+								"computed": false,
+								"new":      "10.36.87.1/32",
+								"old":      "",
+							},
+							"source_service_accounts": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"source_tags": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"target_service_accounts": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"target_tags": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"timeouts": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"random_id": {
+				"id": {
+					0: {
+						"applied": {
+							"byte_length": 8,
+							"keepers":     null,
+							"prefix":      null,
+						},
+						"destroy": false,
+						"diff": {
+							"b64_std": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"b64_url": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"byte_length": {
+								"computed": false,
+								"new":      "8",
+								"old":      "",
+							},
+							"dec": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"hex": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"keepers": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"prefix": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+		},
+	},
+}
+
+module_paths = [
+	[],
+]
+
+terraform_version = "1.0.8"
+
+variables = {
+	"branchname":  "release",
+	"name_prefix": "sentinel",
+	"project":     "Sumanth6798",
+	"region":      "us-east4",
+	"zone":        "us-east4-a",
+}
+
+module = func(path) {
+	if types.type_of(path) is not "list" {
+		error("expected list, got", types.type_of(path))
+	}
+
+	if length(path) < 1 {
+		return _modules.root
+	}
+
+	addr = []
+	for path as p {
+		append(addr, "module")
+		append(addr, p)
+	}
+
+	return _modules[strings.join(addr, ".")]
+}
+
+data = _modules.root.data
+path = _modules.root.path
+resources = _modules.root.resources

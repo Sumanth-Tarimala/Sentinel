@@ -1,0 +1,28 @@
+{
+	"records": [
+		{
+			"key": "test\\ensure-vptm-enabled\\fail\\tfplan-functions",
+			"source": "../../tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "C:/Program Files/Terraform/Terraform-Sentinel/ensure-VPTM-enabled/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test\\ensure-vptm-enabled\\pass\\tfplan-functions",
+			"source": "../../tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "C:/Program Files/Terraform/Terraform-Sentinel/ensure-VPTM-enabled/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test\\enable-integrity-monitoring\\fail\\tfplan-functions",
+			"source": "../../tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "C:/Program Files/Terraform/Terraform-Sentinel/enable-integrity-monitoring/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test\\enable-integrity-monitoring\\pass\\tfplan-functions",
+			"source": "../../tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "C:/Program Files/Terraform/Terraform-Sentinel/enable-integrity-monitoring/tfplan-functions.sentinel"
+		}
+	]
+}

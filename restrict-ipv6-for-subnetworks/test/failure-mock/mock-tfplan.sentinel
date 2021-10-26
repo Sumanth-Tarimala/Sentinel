@@ -1,0 +1,306 @@
+import "strings"
+import "types"
+
+_modules = {
+	"root": {
+		"data": {},
+		"path": [],
+		"resources": {
+			"google_compute_network": {
+				"custom-test": {
+					0: {
+						"applied": {
+							"auto_create_subnetworks":         false,
+							"delete_default_routes_on_create": false,
+							"description":                     null,
+							"name":                            "ipv6-test-network",
+							"timeouts":                        null,
+						},
+						"destroy": false,
+						"diff": {
+							"auto_create_subnetworks": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"delete_default_routes_on_create": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"description": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"gateway_ipv4": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"mtu": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"name": {
+								"computed": false,
+								"new":      "ipv6-test-network",
+								"old":      "",
+							},
+							"project": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"routing_mode": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"self_link": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"timeouts": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"google_compute_subnetwork": {
+				"subnetwork-ipv6": {
+					0: {
+						"applied": {
+							"description":      null,
+							"ip_cidr_range":    "10.0.0.0/22",
+							"ipv6_access_type": "EXTERNAL",
+							"log_config":       [],
+							"name":             "ipv6-test-subnetwork",
+							"private_ip_google_access": null,
+							"region":                   "us-west2",
+							"role":                     null,
+							"stack_type":               "IPV4_IPV6",
+							"timeouts":                 null,
+						},
+						"destroy": false,
+						"diff": {
+							"creation_timestamp": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"description": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"external_ipv6_prefix": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"fingerprint": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"gateway_address": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"ip_cidr_range": {
+								"computed": false,
+								"new":      "10.0.0.0/22",
+								"old":      "",
+							},
+							"ipv6_access_type": {
+								"computed": false,
+								"new":      "EXTERNAL",
+								"old":      "",
+							},
+							"ipv6_cidr_range": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"log_config.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"name": {
+								"computed": false,
+								"new":      "ipv6-test-subnetwork",
+								"old":      "",
+							},
+							"network": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"private_ip_google_access": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"private_ipv6_google_access": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"project": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"purpose": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"region": {
+								"computed": false,
+								"new":      "us-west2",
+								"old":      "",
+							},
+							"role": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"secondary_ip_range.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"self_link": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"stack_type": {
+								"computed": false,
+								"new":      "IPV4_IPV6",
+								"old":      "",
+							},
+							"timeouts": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"random_id": {
+				"id": {
+					0: {
+						"applied": {
+							"byte_length": 8,
+							"keepers":     null,
+							"prefix":      null,
+						},
+						"destroy": false,
+						"diff": {
+							"b64_std": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"b64_url": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"byte_length": {
+								"computed": false,
+								"new":      "8",
+								"old":      "",
+							},
+							"dec": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"hex": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"keepers": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"prefix": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+		},
+	},
+}
+
+module_paths = [
+	[],
+]
+
+terraform_version = "1.0.8"
+
+variables = {
+	"branchname":  "release",
+	"name_prefix": "sentinel",
+	"project":     "Sumanth5454",
+	"region":      "us-east4",
+	"zone":        "us-east4-a",
+}
+
+module = func(path) {
+	if types.type_of(path) is not "list" {
+		error("expected list, got", types.type_of(path))
+	}
+
+	if length(path) < 1 {
+		return _modules.root
+	}
+
+	addr = []
+	for path as p {
+		append(addr, "module")
+		append(addr, p)
+	}
+
+	return _modules[strings.join(addr, ".")]
+}
+
+data = _modules.root.data
+path = _modules.root.path
+resources = _modules.root.resources

@@ -1,0 +1,507 @@
+terraform_version = "1.0.8"
+
+planned_values = {
+	"outputs": {},
+	"resources": {
+		"google_compute_firewall.rules": {
+			"address":        "google_compute_firewall.rules",
+			"depends_on":     [],
+			"deposed_key":    "",
+			"index":          null,
+			"mode":           "managed",
+			"module_address": "",
+			"name":           "rules",
+			"provider_name":  "registry.terraform.io/hashicorp/google",
+			"tainted":        false,
+			"type":           "google_compute_firewall",
+			"values": {
+				"allow": [
+					{
+						"ports": [
+							"80",
+						],
+						"protocol": "tcp",
+					},
+				],
+				"deny":        [],
+				"description": "Creates ingress rule facing the internet",
+				"direction":   "INGRESS",
+				"disabled":    null,
+				"log_config":  [],
+				"name":        "my-firewall-rule",
+				"network":     "default",
+				"priority":    1000,
+				"project":     "my-project-name",
+				"source_ranges": [
+					"10.36.87.1/32",
+				],
+				"source_service_accounts": null,
+				"source_tags":             null,
+				"target_service_accounts": null,
+				"target_tags":             null,
+				"timeouts":                null,
+			},
+		},
+		"random_id.id": {
+			"address":        "random_id.id",
+			"depends_on":     [],
+			"deposed_key":    "",
+			"index":          null,
+			"mode":           "managed",
+			"module_address": "",
+			"name":           "id",
+			"provider_name":  "registry.terraform.io/hashicorp/random",
+			"tainted":        false,
+			"type":           "random_id",
+			"values": {
+				"byte_length": 8,
+				"keepers":     null,
+				"prefix":      null,
+			},
+		},
+	},
+}
+
+variables = {
+	"branchname": {
+		"name":  "branchname",
+		"value": "release",
+	},
+	"name_prefix": {
+		"name":  "name_prefix",
+		"value": "sentinel",
+	},
+	"project": {
+		"name":  "project",
+		"value": "Sumanth6798",
+	},
+	"region": {
+		"name":  "region",
+		"value": "us-east4",
+	},
+	"zone": {
+		"name":  "zone",
+		"value": "us-east4-a",
+	},
+}
+
+resource_changes = {
+	"google_compute_firewall.rules": {
+		"address": "google_compute_firewall.rules",
+		"change": {
+			"actions": [
+				"create",
+			],
+			"after": {
+				"allow": [
+					{
+						"ports": [
+							"80",
+						],
+						"protocol": "tcp",
+					},
+				],
+				"deny":        [],
+				"description": "Creates ingress rule facing the internet",
+				"direction":   "INGRESS",
+				"disabled":    null,
+				"log_config":  [],
+				"name":        "my-firewall-rule",
+				"network":     "default",
+				"priority":    1000,
+				"project":     "my-project-name",
+				"source_ranges": [
+					"10.36.87.1/32",
+				],
+				"source_service_accounts": null,
+				"source_tags":             null,
+				"target_service_accounts": null,
+				"target_tags":             null,
+				"timeouts":                null,
+			},
+			"after_unknown": {
+				"allow": [
+					{
+						"ports": [
+							false,
+						],
+					},
+				],
+				"creation_timestamp": true,
+				"deny":               [],
+				"destination_ranges": true,
+				"enable_logging":     true,
+				"id":                 true,
+				"log_config":         [],
+				"self_link":          true,
+				"source_ranges": [
+					false,
+				],
+			},
+			"before": null,
+		},
+		"deposed":        "",
+		"index":          null,
+		"mode":           "managed",
+		"module_address": "",
+		"name":           "rules",
+		"provider_name":  "registry.terraform.io/hashicorp/google",
+		"type":           "google_compute_firewall",
+	},
+	"random_id.id": {
+		"address": "random_id.id",
+		"change": {
+			"actions": [
+				"create",
+			],
+			"after": {
+				"byte_length": 8,
+				"keepers":     null,
+				"prefix":      null,
+			},
+			"after_unknown": {
+				"b64_std": true,
+				"b64_url": true,
+				"dec":     true,
+				"hex":     true,
+				"id":      true,
+			},
+			"before": null,
+		},
+		"deposed":        "",
+		"index":          null,
+		"mode":           "managed",
+		"module_address": "",
+		"name":           "id",
+		"provider_name":  "registry.terraform.io/hashicorp/random",
+		"type":           "random_id",
+	},
+}
+
+output_changes = {}
+
+raw = {
+	"configuration": {
+		"provider_config": {
+			"google": {
+				"expressions": {
+					"credentials": {},
+					"project": {
+						"references": [
+							"var.project",
+						],
+					},
+					"region": {
+						"references": [
+							"var.region",
+						],
+					},
+					"zone": {
+						"references": [
+							"var.zone",
+						],
+					},
+				},
+				"name": "google",
+			},
+			"google-beta": {
+				"expressions": {
+					"credentials": {},
+					"project": {
+						"references": [
+							"var.project",
+						],
+					},
+					"region": {
+						"references": [
+							"var.region",
+						],
+					},
+					"zone": {
+						"references": [
+							"var.zone",
+						],
+					},
+				},
+				"name": "google-beta",
+			},
+			"random": {
+				"name": "random",
+			},
+		},
+		"root_module": {
+			"resources": [
+				{
+					"address": "google_compute_firewall.rules",
+					"expressions": {
+						"allow": [
+							{
+								"ports": {
+									"constant_value": [
+										"80",
+									],
+								},
+								"protocol": {
+									"constant_value": "tcp",
+								},
+							},
+						],
+						"description": {
+							"constant_value": "Creates ingress rule facing the internet",
+						},
+						"direction": {
+							"constant_value": "INGRESS",
+						},
+						"name": {
+							"constant_value": "my-firewall-rule",
+						},
+						"network": {
+							"constant_value": "default",
+						},
+						"project": {
+							"constant_value": "my-project-name",
+						},
+						"source_ranges": {
+							"constant_value": [
+								"10.36.87.1/32",
+							],
+						},
+					},
+					"mode":                "managed",
+					"name":                "rules",
+					"provider_config_key": "google",
+					"schema_version":      1,
+					"type":                "google_compute_firewall",
+				},
+				{
+					"address": "random_id.id",
+					"expressions": {
+						"byte_length": {
+							"constant_value": 8,
+						},
+					},
+					"mode":                "managed",
+					"name":                "id",
+					"provider_config_key": "random",
+					"schema_version":      0,
+					"type":                "random_id",
+				},
+			],
+			"variables": {
+				"branchname": {
+					"default":     "release",
+					"description": "Branch name for testing",
+				},
+				"name_prefix": {
+					"default":     "sentinel",
+					"description": "The name prefix for the database instance. Will be appended with a random string. Use lowercase letters, numbers, and hyphens. Start with a letter.",
+				},
+				"project": {
+					"default":     "Sumanth6798",
+					"description": "The project ID to host the database in.",
+				},
+				"region": {
+					"default":     "us-east4",
+					"description": "The region to host the database in.",
+				},
+				"zone": {
+					"default":     "us-east4-a",
+					"description": "The zoneto host the database in.",
+				},
+			},
+		},
+	},
+	"format_version": "0.2",
+	"planned_values": {
+		"root_module": {
+			"resources": [
+				{
+					"address":        "google_compute_firewall.rules",
+					"mode":           "managed",
+					"name":           "rules",
+					"provider_name":  "registry.terraform.io/hashicorp/google",
+					"schema_version": 1,
+					"sensitive_values": {
+						"allow": [
+							{
+								"ports": [
+									false,
+								],
+							},
+						],
+						"deny":               [],
+						"destination_ranges": [],
+						"log_config":         [],
+						"source_ranges": [
+							false,
+						],
+					},
+					"type": "google_compute_firewall",
+					"values": {
+						"allow": [
+							{
+								"ports": [
+									"80",
+								],
+								"protocol": "tcp",
+							},
+						],
+						"deny":        [],
+						"description": "Creates ingress rule facing the internet",
+						"direction":   "INGRESS",
+						"disabled":    null,
+						"log_config":  [],
+						"name":        "my-firewall-rule",
+						"network":     "default",
+						"priority":    1000,
+						"project":     "my-project-name",
+						"source_ranges": [
+							"10.36.87.1/32",
+						],
+						"source_service_accounts": null,
+						"source_tags":             null,
+						"target_service_accounts": null,
+						"target_tags":             null,
+						"timeouts":                null,
+					},
+				},
+				{
+					"address":          "random_id.id",
+					"mode":             "managed",
+					"name":             "id",
+					"provider_name":    "registry.terraform.io/hashicorp/random",
+					"schema_version":   0,
+					"sensitive_values": {},
+					"type":             "random_id",
+					"values": {
+						"byte_length": 8,
+						"keepers":     null,
+						"prefix":      null,
+					},
+				},
+			],
+		},
+	},
+	"resource_changes": [
+		{
+			"address": "google_compute_firewall.rules",
+			"change": {
+				"actions": [
+					"create",
+				],
+				"after": {
+					"allow": [
+						{
+							"ports": [
+								"80",
+							],
+							"protocol": "tcp",
+						},
+					],
+					"deny":        [],
+					"description": "Creates ingress rule facing the internet",
+					"direction":   "INGRESS",
+					"disabled":    null,
+					"log_config":  [],
+					"name":        "my-firewall-rule",
+					"network":     "default",
+					"priority":    1000,
+					"project":     "my-project-name",
+					"source_ranges": [
+						"10.36.87.1/32",
+					],
+					"source_service_accounts": null,
+					"source_tags":             null,
+					"target_service_accounts": null,
+					"target_tags":             null,
+					"timeouts":                null,
+				},
+				"after_sensitive": {
+					"allow": [
+						{
+							"ports": [
+								false,
+							],
+						},
+					],
+					"deny":               [],
+					"destination_ranges": [],
+					"log_config":         [],
+					"source_ranges": [
+						false,
+					],
+				},
+				"after_unknown": {
+					"allow": [
+						{
+							"ports": [
+								false,
+							],
+						},
+					],
+					"creation_timestamp": true,
+					"deny":               [],
+					"destination_ranges": true,
+					"enable_logging":     true,
+					"id":                 true,
+					"log_config":         [],
+					"self_link":          true,
+					"source_ranges": [
+						false,
+					],
+				},
+				"before":           null,
+				"before_sensitive": false,
+			},
+			"mode":          "managed",
+			"name":          "rules",
+			"provider_name": "registry.terraform.io/hashicorp/google",
+			"type":          "google_compute_firewall",
+		},
+		{
+			"address": "random_id.id",
+			"change": {
+				"actions": [
+					"create",
+				],
+				"after": {
+					"byte_length": 8,
+					"keepers":     null,
+					"prefix":      null,
+				},
+				"after_sensitive": {},
+				"after_unknown": {
+					"b64_std": true,
+					"b64_url": true,
+					"dec":     true,
+					"hex":     true,
+					"id":      true,
+				},
+				"before":           null,
+				"before_sensitive": false,
+			},
+			"mode":          "managed",
+			"name":          "id",
+			"provider_name": "registry.terraform.io/hashicorp/random",
+			"type":          "random_id",
+		},
+	],
+	"terraform_version": "1.0.8",
+	"variables": {
+		"branchname": {
+			"value": "release",
+		},
+		"name_prefix": {
+			"value": "sentinel",
+		},
+		"project": {
+			"value": "Sumanth6798",
+		},
+		"region": {
+			"value": "us-east4",
+		},
+		"zone": {
+			"value": "us-east4-a",
+		},
+	},
+}

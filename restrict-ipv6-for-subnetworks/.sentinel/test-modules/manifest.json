@@ -1,0 +1,16 @@
+{
+	"records": [
+		{
+			"key": "test\\restrict-ipv6-for-subnetworks\\fail\\tfplan-functions",
+			"source": "../../tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "C:/Program Files/Terraform/Terraform-Sentinel/restrict-ipv6-for-subnetworks/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test\\restrict-ipv6-for-subnetworks\\pass\\tfplan-functions",
+			"source": "../../tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "C:/Program Files/Terraform/Terraform-Sentinel/restrict-ipv6-for-subnetworks/tfplan-functions.sentinel"
+		}
+	]
+}

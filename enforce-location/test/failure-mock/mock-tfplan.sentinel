@@ -1,0 +1,272 @@
+import "strings"
+import "types"
+
+_modules = {
+	"root": {
+		"data": {},
+		"path": [],
+		"resources": {
+			"google_compute_region_backend_service": {
+				"default": {
+					0: {
+						"applied": {
+							"affinity_cookie_ttl_sec":         null,
+							"backend":                         [],
+							"circuit_breakers":                [],
+							"connection_draining_timeout_sec": 10,
+							"consistent_hash":                 [],
+							"description":                     null,
+							"enable_cdn":                      null,
+							"failover_policy":                 [],
+							"health_checks":                   null,
+							"iap":                             [],
+							"load_balancing_scheme": "INTERNAL",
+							"locality_lb_policy":    null,
+							"name":                  "region-service",
+							"network":               null,
+							"outlier_detection":     [],
+							"region":                "us-east1",
+							"session_affinity":      "CLIENT_IP",
+							"timeouts":              null,
+						},
+						"destroy": false,
+						"diff": {
+							"affinity_cookie_ttl_sec": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"backend.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"cdn_policy.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"circuit_breakers.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"connection_draining_timeout_sec": {
+								"computed": false,
+								"new":      "10",
+								"old":      "",
+							},
+							"consistent_hash.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"creation_timestamp": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"description": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"enable_cdn": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"failover_policy.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"fingerprint": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"health_checks": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"iap.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"load_balancing_scheme": {
+								"computed": false,
+								"new":      "INTERNAL",
+								"old":      "",
+							},
+							"locality_lb_policy": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"log_config.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"name": {
+								"computed": false,
+								"new":      "region-service",
+								"old":      "",
+							},
+							"network": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"outlier_detection.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"port_name": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"project": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"protocol": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"region": {
+								"computed": false,
+								"new":      "us-east1",
+								"old":      "",
+							},
+							"self_link": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"session_affinity": {
+								"computed": false,
+								"new":      "CLIENT_IP",
+								"old":      "",
+							},
+							"timeout_sec": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"timeouts": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"random_id": {
+				"id": {
+					0: {
+						"applied": {
+							"byte_length": 8,
+							"keepers":     null,
+							"prefix":      null,
+						},
+						"destroy": false,
+						"diff": {
+							"b64_std": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"b64_url": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"byte_length": {
+								"computed": false,
+								"new":      "8",
+								"old":      "",
+							},
+							"dec": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"hex": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"keepers": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"prefix": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+		},
+	},
+}
+
+module_paths = [
+	[],
+]
+
+terraform_version = "1.0.8"
+
+variables = {
+	"branchname":  "release",
+	"name_prefix": "sentinel",
+	"project":     "Sumanth6798",
+	"region":      "us-east4",
+	"zone":        "us-east4-a",
+}
+
+module = func(path) {
+	if types.type_of(path) is not "list" {
+		error("expected list, got", types.type_of(path))
+	}
+
+	if length(path) < 1 {
+		return _modules.root
+	}
+
+	addr = []
+	for path as p {
+		append(addr, "module")
+		append(addr, p)
+	}
+
+	return _modules[strings.join(addr, ".")]
+}
+
+data = _modules.root.data
+path = _modules.root.path
+resources = _modules.root.resources

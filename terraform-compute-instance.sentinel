@@ -1,0 +1,17 @@
+import "tfplan" 
+
+# Rule to enforce "Name" tag on all instances
+mandatory_instance_tags = rule {
+    all ec2_instances as _, instance {
+        all mandatory_tags as mt {
+            instance.change.after.tags contains mt
+        }
+    }
+}
+
+
+
+# Main rule that requires other rules to be true
+main = rule {
+    (instance_type_allowed and mandatory_instance_tags) else true
+}

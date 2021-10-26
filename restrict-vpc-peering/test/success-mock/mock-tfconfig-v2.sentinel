@@ -1,0 +1,232 @@
+import "strings"
+
+providers = {
+	"google": {
+		"alias": "",
+		"config": {
+			"credentials": {
+				"constant_value": null,
+			},
+			"project": {
+				"references": [
+					"var.project",
+				],
+			},
+			"region": {
+				"references": [
+					"var.region",
+				],
+			},
+			"zone": {
+				"references": [
+					"var.zone",
+				],
+			},
+		},
+		"module_address":      "",
+		"name":                "google",
+		"provider_config_key": "google",
+		"version_constraint":  "",
+	},
+	"google-beta": {
+		"alias": "",
+		"config": {
+			"credentials": {
+				"constant_value": null,
+			},
+			"project": {
+				"references": [
+					"var.project",
+				],
+			},
+			"region": {
+				"references": [
+					"var.region",
+				],
+			},
+			"zone": {
+				"references": [
+					"var.zone",
+				],
+			},
+		},
+		"module_address":      "",
+		"name":                "google-beta",
+		"provider_config_key": "google-beta",
+		"version_constraint":  "",
+	},
+	"random": {
+		"alias":               "",
+		"config":              {},
+		"module_address":      "",
+		"name":                "random",
+		"provider_config_key": "random",
+		"version_constraint":  "",
+	},
+}
+
+resources = {
+	"google_compute_network.default": {
+		"address": "google_compute_network.default",
+		"config": {
+			"auto_create_subnetworks": {
+				"constant_value": "false",
+			},
+			"name": {
+				"constant_value": "foobar",
+			},
+		},
+		"count":               {},
+		"depends_on":          [],
+		"for_each":            {},
+		"mode":                "managed",
+		"module_address":      "",
+		"name":                "default",
+		"provider_config_key": "google",
+		"provisioners":        [],
+		"type":                "google_compute_network",
+	},
+	"google_compute_network.other": {
+		"address": "google_compute_network.other",
+		"config": {
+			"auto_create_subnetworks": {
+				"constant_value": "false",
+			},
+			"name": {
+				"constant_value": "other",
+			},
+		},
+		"count":               {},
+		"depends_on":          [],
+		"for_each":            {},
+		"mode":                "managed",
+		"module_address":      "",
+		"name":                "other",
+		"provider_config_key": "google",
+		"provisioners":        [],
+		"type":                "google_compute_network",
+	},
+	"google_compute_network_peering.peering1": {
+		"address": "google_compute_network_peering.peering1",
+		"config": {
+			"name": {
+				"constant_value": "peering1",
+			},
+			"network": {
+				"references": [
+					"google_compute_network.default.id",
+					"google_compute_network.default",
+				],
+			},
+			"peer_network": {
+				"references": [
+					"google_compute_network.other.id",
+					"google_compute_network.other",
+				],
+			},
+		},
+		"count":               {},
+		"depends_on":          [],
+		"for_each":            {},
+		"mode":                "managed",
+		"module_address":      "",
+		"name":                "peering1",
+		"provider_config_key": "google",
+		"provisioners":        [],
+		"type":                "google_compute_network_peering",
+	},
+	"google_compute_network_peering.peering2": {
+		"address": "google_compute_network_peering.peering2",
+		"config": {
+			"name": {
+				"constant_value": "peering2",
+			},
+			"network": {
+				"references": [
+					"google_compute_network.other.id",
+					"google_compute_network.other",
+				],
+			},
+			"peer_network": {
+				"references": [
+					"google_compute_network.default.id",
+					"google_compute_network.default",
+				],
+			},
+		},
+		"count":               {},
+		"depends_on":          [],
+		"for_each":            {},
+		"mode":                "managed",
+		"module_address":      "",
+		"name":                "peering2",
+		"provider_config_key": "google",
+		"provisioners":        [],
+		"type":                "google_compute_network_peering",
+	},
+	"random_id.id": {
+		"address": "random_id.id",
+		"config": {
+			"byte_length": {
+				"constant_value": 8,
+			},
+		},
+		"count":               {},
+		"depends_on":          [],
+		"for_each":            {},
+		"mode":                "managed",
+		"module_address":      "",
+		"name":                "id",
+		"provider_config_key": "random",
+		"provisioners":        [],
+		"type":                "random_id",
+	},
+}
+
+provisioners = {}
+
+variables = {
+	"branchname": {
+		"default":        "release",
+		"description":    "Branch name for testing",
+		"module_address": "",
+		"name":           "branchname",
+	},
+	"name_prefix": {
+		"default":        "sentinel",
+		"description":    "The name prefix for the database instance. Will be appended with a random string. Use lowercase letters, numbers, and hyphens. Start with a letter.",
+		"module_address": "",
+		"name":           "name_prefix",
+	},
+	"project": {
+		"default":        "Sumanth5454",
+		"description":    "The project ID to host the database in.",
+		"module_address": "",
+		"name":           "project",
+	},
+	"region": {
+		"default":        "us-east4",
+		"description":    "The region to host the database in.",
+		"module_address": "",
+		"name":           "region",
+	},
+	"zone": {
+		"default":        "us-east4-a",
+		"description":    "The zoneto host the database in.",
+		"module_address": "",
+		"name":           "zone",
+	},
+}
+
+outputs = {}
+
+module_calls = {}
+
+strip_index = func(addr) {
+	s = strings.split(addr, ".")
+	for s as i, v {
+		s[i] = strings.split(v, "[")[0]
+	}
+
+	return strings.join(s, ".")
+}
