@@ -1,6 +1,6 @@
 policy "enforce-secure-reboot" {
   source            = "./enforce-secure-reboot.sentinel"
-  enforcement_level = "advisory"
+  enforcement_level = "soft-mandatory"
 }
 
 module "tfplan-functions" {
