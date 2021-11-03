@@ -3,3 +3,10 @@ policy "enforce-secure-reboot" {
   enforcement_level = "advisory"
 }
 
+module "tfplan-functions" {
+    source = "./tfplan-functions.sentinel"
+}
+
+  module "tfplan/v2" {
+    source = "./mock-tfplan-v2-success.sentinel"
+  }
