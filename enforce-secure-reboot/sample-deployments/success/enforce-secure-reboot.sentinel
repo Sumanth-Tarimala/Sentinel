@@ -4,7 +4,6 @@
 # Import common-functions/tfplan-functions/tfplan-functions.sentinel
 # with Alias "plan"
 import "tfplan-functions" as plan
-import "tfplan/v2" as tfplan
 
 # Allowed GCE Instance Types
 # Include "null" to allow missing or computed values
