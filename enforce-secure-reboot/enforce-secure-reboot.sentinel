@@ -1,5 +1,5 @@
 # This policy uses the Sentinel tfplan/v2 import to require that
-# all GCE instances have machine types from an allowed list
+# all gce instances have machine types from an allowed list
 
 # Import common-functions/tfplan-functions/tfplan-functions.sentinel
 # with alias "plan"
