@@ -2,7 +2,7 @@
 # all GCE instances have machine types from an allowed lists
 
 # Import common-functions/tfplan-functions/tfplan-functions.sentinel
-# with alias "plan"
+# with Alias "plan"
 import "tfplan-functions" as plan
 import "tfplan/v2" as tfplan
 
