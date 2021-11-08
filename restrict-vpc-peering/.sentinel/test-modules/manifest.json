@@ -1,10 +1,28 @@
 {
 	"records": [
 		{
+			"key": "test\\Restrict_MachineType\\fail\\tfplan-functions",
+			"source": "../../tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "C:/Program Files/Terraform/Terraform-Sentinel/Restrict-MachineType/tfplan-functions.sentinel"
+		},
+		{
 			"key": "test\\Restrict_MachineType\\pass\\tfplan-functions",
 			"source": "../../tfplan-functions.sentinel",
 			"sourceSum": "",
 			"dest": "C:/Program Files/Terraform/Terraform-Sentinel/Restrict-MachineType/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test\\restrict-vpc-peering\\fail\\tfplan-functions",
+			"source": "../../tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "C:/Program Files/Terraform/Terraform-Sentinel/restrict-vpc-peering/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test\\restrict-vpc-peering\\pass\\tfplan-functions",
+			"source": "../../tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "C:/Program Files/Terraform/Terraform-Sentinel/restrict-vpc-peering/tfplan-functions.sentinel"
 		},
 		{
 			"key": "test\\Restrict-MachineType\\fail\\tfplan-functions",
@@ -14,12 +32,6 @@
 		},
 		{
 			"key": "test\\Restrict-MachineType\\pass\\tfplan-functions",
-			"source": "../../tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "C:/Program Files/Terraform/Terraform-Sentinel/Restrict-MachineType/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test\\Restrict_MachineType\\fail\\tfplan-functions",
 			"source": "../../tfplan-functions.sentinel",
 			"sourceSum": "",
 			"dest": "C:/Program Files/Terraform/Terraform-Sentinel/Restrict-MachineType/tfplan-functions.sentinel"

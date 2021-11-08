@@ -1,5 +1,5 @@
 provider "google" {
- credentials = file("sumanth6798-4c471c48d035.json")
+ credentials = file("sumanth5454-33867b610403.json")
  project     = var.project
  region      = var.region
  zone        = var.zone
@@ -15,7 +15,7 @@ resource "random_id" "id" {
 }
 
 provider "google-beta" {
- credentials = file("sumanth6798-4c471c48d035.json")
+ credentials = file("sumanth5454-33867b610403.json")
  project     = var.project
  region      = var.region
  zone        = var.zone

@@ -4,12 +4,6 @@ resource "google_compute_network_peering" "peering1" {
   peer_network = google_compute_network.other.id
 }
 
-resource "google_compute_network_peering" "peering3" {
-  name         = "peering1"
-  network      = google_compute_network.default.id
-  peer_network = default
-
-}
 
 resource "google_compute_network_peering" "peering2" {
   name         = "peering2"

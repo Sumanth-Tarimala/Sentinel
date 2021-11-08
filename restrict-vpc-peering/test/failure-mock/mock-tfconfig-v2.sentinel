@@ -66,56 +66,20 @@ providers = {
 }
 
 resources = {
-	"google_compute_instance.default": {
-		"address": "google_compute_instance.default",
+	"google_compute_network.vpc_network": {
+		"address": "google_compute_network.vpc_network",
 		"config": {
-			"boot_disk": [
-				{
-					"initialize_params": [
-						{
-							"image": {
-								"constant_value": "debian-cloud/debian-9",
-							},
-						},
-					],
-				},
-			],
-			"machine_type": {
-				"constant_value": "e2-medium",
+			"auto_create_subnetworks": {
+				"constant_value": true,
 			},
-			"metadata": {
-				"constant_value": {
-					"foo": "bar",
-				},
+			"mtu": {
+				"constant_value": 1460,
 			},
 			"name": {
-				"constant_value": "test",
+				"constant_value": "vpc-network",
 			},
-			"network_interface": [
-				{
-					"access_config": [
-						{},
-					],
-					"network": {
-						"constant_value": "default",
-					},
-				},
-			],
-			"scratch_disk": [
-				{
-					"interface": {
-						"constant_value": "SCSI",
-					},
-				},
-			],
-			"tags": {
-				"constant_value": [
-					"foo",
-					"bar",
-				],
-			},
-			"zone": {
-				"constant_value": "us-central1-a",
+			"project": {
+				"constant_value": "my-project-name",
 			},
 		},
 		"count":               {},
@@ -123,10 +87,10 @@ resources = {
 		"for_each":            {},
 		"mode":                "managed",
 		"module_address":      "",
-		"name":                "default",
+		"name":                "vpc_network",
 		"provider_config_key": "google",
 		"provisioners":        [],
-		"type":                "google_compute_instance",
+		"type":                "google_compute_network",
 	},
 	"random_id.id": {
 		"address": "random_id.id",
@@ -163,7 +127,7 @@ variables = {
 		"name":           "name_prefix",
 	},
 	"project": {
-		"default":        "Sumanth6798",
+		"default":        "Sumanth5454",
 		"description":    "The project ID to host the database in.",
 		"module_address": "",
 		"name":           "project",

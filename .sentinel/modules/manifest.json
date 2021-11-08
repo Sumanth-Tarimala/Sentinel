@@ -1,0 +1,16 @@
+{
+	"records": [
+		{
+			"key": "tfplan-functions",
+			"source": "./tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "C:/Program Files/Terraform/Terraform-Sentinel/tfplan-functions.sentinel"
+		},
+		{
+			"key": "tfplan/v2",
+			"source": "./mock-tfplan-v2-success.sentinel",
+			"sourceSum": "",
+			"dest": "C:/Program Files/Terraform/Terraform-Sentinel/mock-tfplan-v2-success.sentinel"
+		}
+	]
+}

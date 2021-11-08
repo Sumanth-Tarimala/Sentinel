@@ -1,0 +1,520 @@
+terraform_version = "1.0.8"
+
+planned_values = {
+	"outputs": {},
+	"resources": {
+		"google_compute_shared_vpc_host_project.host": {
+			"address":        "google_compute_shared_vpc_host_project.host",
+			"depends_on":     [],
+			"deposed_key":    "",
+			"index":          null,
+			"mode":           "managed",
+			"module_address": "",
+			"name":           "host",
+			"provider_name":  "registry.terraform.io/hashicorp/google",
+			"tainted":        false,
+			"type":           "google_compute_shared_vpc_host_project",
+			"values": {
+				"project":  "host-project-id",
+				"timeouts": null,
+			},
+		},
+		"google_compute_shared_vpc_service_project.service1": {
+			"address":        "google_compute_shared_vpc_service_project.service1",
+			"depends_on":     [],
+			"deposed_key":    "",
+			"index":          null,
+			"mode":           "managed",
+			"module_address": "",
+			"name":           "service1",
+			"provider_name":  "registry.terraform.io/hashicorp/google",
+			"tainted":        false,
+			"type":           "google_compute_shared_vpc_service_project",
+			"values": {
+				"host_project":    "host-project-id",
+				"service_project": "service-project-id-1",
+				"timeouts":        null,
+			},
+		},
+		"google_compute_shared_vpc_service_project.service2": {
+			"address":        "google_compute_shared_vpc_service_project.service2",
+			"depends_on":     [],
+			"deposed_key":    "",
+			"index":          null,
+			"mode":           "managed",
+			"module_address": "",
+			"name":           "service2",
+			"provider_name":  "registry.terraform.io/hashicorp/google",
+			"tainted":        false,
+			"type":           "google_compute_shared_vpc_service_project",
+			"values": {
+				"host_project":    "host-project-id",
+				"service_project": "service-project-id-2",
+				"timeouts":        null,
+			},
+		},
+		"random_id.id": {
+			"address":        "random_id.id",
+			"depends_on":     [],
+			"deposed_key":    "",
+			"index":          null,
+			"mode":           "managed",
+			"module_address": "",
+			"name":           "id",
+			"provider_name":  "registry.terraform.io/hashicorp/random",
+			"tainted":        false,
+			"type":           "random_id",
+			"values": {
+				"byte_length": 8,
+				"keepers":     null,
+				"prefix":      null,
+			},
+		},
+	},
+}
+
+variables = {
+	"branchname": {
+		"name":  "branchname",
+		"value": "release",
+	},
+	"name_prefix": {
+		"name":  "name_prefix",
+		"value": "sentinel",
+	},
+	"project": {
+		"name":  "project",
+		"value": "Sumanth5454",
+	},
+	"region": {
+		"name":  "region",
+		"value": "us-east4",
+	},
+	"zone": {
+		"name":  "zone",
+		"value": "us-east4-a",
+	},
+}
+
+resource_changes = {
+	"google_compute_shared_vpc_host_project.host": {
+		"address": "google_compute_shared_vpc_host_project.host",
+		"change": {
+			"actions": [
+				"create",
+			],
+			"after": {
+				"project":  "host-project-id",
+				"timeouts": null,
+			},
+			"after_unknown": {
+				"id": true,
+			},
+			"before": null,
+		},
+		"deposed":        "",
+		"index":          null,
+		"mode":           "managed",
+		"module_address": "",
+		"name":           "host",
+		"provider_name":  "registry.terraform.io/hashicorp/google",
+		"type":           "google_compute_shared_vpc_host_project",
+	},
+	"google_compute_shared_vpc_service_project.service1": {
+		"address": "google_compute_shared_vpc_service_project.service1",
+		"change": {
+			"actions": [
+				"create",
+			],
+			"after": {
+				"host_project":    "host-project-id",
+				"service_project": "service-project-id-1",
+				"timeouts":        null,
+			},
+			"after_unknown": {
+				"id": true,
+			},
+			"before": null,
+		},
+		"deposed":        "",
+		"index":          null,
+		"mode":           "managed",
+		"module_address": "",
+		"name":           "service1",
+		"provider_name":  "registry.terraform.io/hashicorp/google",
+		"type":           "google_compute_shared_vpc_service_project",
+	},
+	"google_compute_shared_vpc_service_project.service2": {
+		"address": "google_compute_shared_vpc_service_project.service2",
+		"change": {
+			"actions": [
+				"create",
+			],
+			"after": {
+				"host_project":    "host-project-id",
+				"service_project": "service-project-id-2",
+				"timeouts":        null,
+			},
+			"after_unknown": {
+				"id": true,
+			},
+			"before": null,
+		},
+		"deposed":        "",
+		"index":          null,
+		"mode":           "managed",
+		"module_address": "",
+		"name":           "service2",
+		"provider_name":  "registry.terraform.io/hashicorp/google",
+		"type":           "google_compute_shared_vpc_service_project",
+	},
+	"random_id.id": {
+		"address": "random_id.id",
+		"change": {
+			"actions": [
+				"create",
+			],
+			"after": {
+				"byte_length": 8,
+				"keepers":     null,
+				"prefix":      null,
+			},
+			"after_unknown": {
+				"b64_std": true,
+				"b64_url": true,
+				"dec":     true,
+				"hex":     true,
+				"id":      true,
+			},
+			"before": null,
+		},
+		"deposed":        "",
+		"index":          null,
+		"mode":           "managed",
+		"module_address": "",
+		"name":           "id",
+		"provider_name":  "registry.terraform.io/hashicorp/random",
+		"type":           "random_id",
+	},
+}
+
+output_changes = {}
+
+raw = {
+	"configuration": {
+		"provider_config": {
+			"google": {
+				"expressions": {
+					"credentials": {},
+					"project": {
+						"references": [
+							"var.project",
+						],
+					},
+					"region": {
+						"references": [
+							"var.region",
+						],
+					},
+					"zone": {
+						"references": [
+							"var.zone",
+						],
+					},
+				},
+				"name": "google",
+			},
+			"google-beta": {
+				"expressions": {
+					"credentials": {},
+					"project": {
+						"references": [
+							"var.project",
+						],
+					},
+					"region": {
+						"references": [
+							"var.region",
+						],
+					},
+					"zone": {
+						"references": [
+							"var.zone",
+						],
+					},
+				},
+				"name": "google-beta",
+			},
+			"random": {
+				"name": "random",
+			},
+		},
+		"root_module": {
+			"resources": [
+				{
+					"address": "google_compute_shared_vpc_host_project.host",
+					"expressions": {
+						"project": {
+							"constant_value": "host-project-id",
+						},
+					},
+					"mode":                "managed",
+					"name":                "host",
+					"provider_config_key": "google",
+					"schema_version":      0,
+					"type":                "google_compute_shared_vpc_host_project",
+				},
+				{
+					"address": "google_compute_shared_vpc_service_project.service1",
+					"expressions": {
+						"host_project": {
+							"references": [
+								"google_compute_shared_vpc_host_project.host.project",
+								"google_compute_shared_vpc_host_project.host",
+							],
+						},
+						"service_project": {
+							"constant_value": "service-project-id-1",
+						},
+					},
+					"mode":                "managed",
+					"name":                "service1",
+					"provider_config_key": "google",
+					"schema_version":      0,
+					"type":                "google_compute_shared_vpc_service_project",
+				},
+				{
+					"address": "google_compute_shared_vpc_service_project.service2",
+					"expressions": {
+						"host_project": {
+							"references": [
+								"google_compute_shared_vpc_host_project.host.project",
+								"google_compute_shared_vpc_host_project.host",
+							],
+						},
+						"service_project": {
+							"constant_value": "service-project-id-2",
+						},
+					},
+					"mode":                "managed",
+					"name":                "service2",
+					"provider_config_key": "google",
+					"schema_version":      0,
+					"type":                "google_compute_shared_vpc_service_project",
+				},
+				{
+					"address": "random_id.id",
+					"expressions": {
+						"byte_length": {
+							"constant_value": 8,
+						},
+					},
+					"mode":                "managed",
+					"name":                "id",
+					"provider_config_key": "random",
+					"schema_version":      0,
+					"type":                "random_id",
+				},
+			],
+			"variables": {
+				"branchname": {
+					"default":     "release",
+					"description": "Branch name for testing",
+				},
+				"name_prefix": {
+					"default":     "sentinel",
+					"description": "The name prefix for the database instance. Will be appended with a random string. Use lowercase letters, numbers, and hyphens. Start with a letter.",
+				},
+				"project": {
+					"default":     "Sumanth5454",
+					"description": "The project ID to host the database in.",
+				},
+				"region": {
+					"default":     "us-east4",
+					"description": "The region to host the database in.",
+				},
+				"zone": {
+					"default":     "us-east4-a",
+					"description": "The zoneto host the database in.",
+				},
+			},
+		},
+	},
+	"format_version": "0.2",
+	"planned_values": {
+		"root_module": {
+			"resources": [
+				{
+					"address":          "google_compute_shared_vpc_host_project.host",
+					"mode":             "managed",
+					"name":             "host",
+					"provider_name":    "registry.terraform.io/hashicorp/google",
+					"schema_version":   0,
+					"sensitive_values": {},
+					"type":             "google_compute_shared_vpc_host_project",
+					"values": {
+						"project":  "host-project-id",
+						"timeouts": null,
+					},
+				},
+				{
+					"address":          "google_compute_shared_vpc_service_project.service1",
+					"mode":             "managed",
+					"name":             "service1",
+					"provider_name":    "registry.terraform.io/hashicorp/google",
+					"schema_version":   0,
+					"sensitive_values": {},
+					"type":             "google_compute_shared_vpc_service_project",
+					"values": {
+						"host_project":    "host-project-id",
+						"service_project": "service-project-id-1",
+						"timeouts":        null,
+					},
+				},
+				{
+					"address":          "google_compute_shared_vpc_service_project.service2",
+					"mode":             "managed",
+					"name":             "service2",
+					"provider_name":    "registry.terraform.io/hashicorp/google",
+					"schema_version":   0,
+					"sensitive_values": {},
+					"type":             "google_compute_shared_vpc_service_project",
+					"values": {
+						"host_project":    "host-project-id",
+						"service_project": "service-project-id-2",
+						"timeouts":        null,
+					},
+				},
+				{
+					"address":          "random_id.id",
+					"mode":             "managed",
+					"name":             "id",
+					"provider_name":    "registry.terraform.io/hashicorp/random",
+					"schema_version":   0,
+					"sensitive_values": {},
+					"type":             "random_id",
+					"values": {
+						"byte_length": 8,
+						"keepers":     null,
+						"prefix":      null,
+					},
+				},
+			],
+		},
+	},
+	"resource_changes": [
+		{
+			"address": "google_compute_shared_vpc_host_project.host",
+			"change": {
+				"actions": [
+					"create",
+				],
+				"after": {
+					"project":  "host-project-id",
+					"timeouts": null,
+				},
+				"after_sensitive": {},
+				"after_unknown": {
+					"id": true,
+				},
+				"before":           null,
+				"before_sensitive": false,
+			},
+			"mode":          "managed",
+			"name":          "host",
+			"provider_name": "registry.terraform.io/hashicorp/google",
+			"type":          "google_compute_shared_vpc_host_project",
+		},
+		{
+			"address": "google_compute_shared_vpc_service_project.service1",
+			"change": {
+				"actions": [
+					"create",
+				],
+				"after": {
+					"host_project":    "host-project-id",
+					"service_project": "service-project-id-1",
+					"timeouts":        null,
+				},
+				"after_sensitive": {},
+				"after_unknown": {
+					"id": true,
+				},
+				"before":           null,
+				"before_sensitive": false,
+			},
+			"mode":          "managed",
+			"name":          "service1",
+			"provider_name": "registry.terraform.io/hashicorp/google",
+			"type":          "google_compute_shared_vpc_service_project",
+		},
+		{
+			"address": "google_compute_shared_vpc_service_project.service2",
+			"change": {
+				"actions": [
+					"create",
+				],
+				"after": {
+					"host_project":    "host-project-id",
+					"service_project": "service-project-id-2",
+					"timeouts":        null,
+				},
+				"after_sensitive": {},
+				"after_unknown": {
+					"id": true,
+				},
+				"before":           null,
+				"before_sensitive": false,
+			},
+			"mode":          "managed",
+			"name":          "service2",
+			"provider_name": "registry.terraform.io/hashicorp/google",
+			"type":          "google_compute_shared_vpc_service_project",
+		},
+		{
+			"address": "random_id.id",
+			"change": {
+				"actions": [
+					"create",
+				],
+				"after": {
+					"byte_length": 8,
+					"keepers":     null,
+					"prefix":      null,
+				},
+				"after_sensitive": {},
+				"after_unknown": {
+					"b64_std": true,
+					"b64_url": true,
+					"dec":     true,
+					"hex":     true,
+					"id":      true,
+				},
+				"before":           null,
+				"before_sensitive": false,
+			},
+			"mode":          "managed",
+			"name":          "id",
+			"provider_name": "registry.terraform.io/hashicorp/random",
+			"type":          "random_id",
+		},
+	],
+	"terraform_version": "1.0.8",
+	"variables": {
+		"branchname": {
+			"value": "release",
+		},
+		"name_prefix": {
+			"value": "sentinel",
+		},
+		"project": {
+			"value": "Sumanth5454",
+		},
+		"region": {
+			"value": "us-east4",
+		},
+		"zone": {
+			"value": "us-east4-a",
+		},
+	},
+}

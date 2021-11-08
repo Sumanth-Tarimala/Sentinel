@@ -1,0 +1,10 @@
+{
+	"records": [
+		{
+			"key": "enforce-secure-reboot",
+			"source": "./enforce-secure-reboot.sentinel",
+			"sourceSum": "",
+			"dest": "C:/Program Files/Terraform/Terraform-Sentinel/enforce-secure-reboot.sentinel"
+		}
+	]
+}
