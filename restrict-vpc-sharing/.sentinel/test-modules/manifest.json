@@ -1,0 +1,40 @@
+{
+	"records": [
+		{
+			"key": "test\\restrict-vpc-sharing\\fail\\tfplan-functions",
+			"source": "../../tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "C:/Program Files/Terraform/Terraform-Sentinel/restrict-vpc-sharing/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test\\Restrict-MachineType\\fail\\tfplan-functions",
+			"source": "../../tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "C:/Program Files/Terraform/Terraform-Sentinel/Restrict-MachineType/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test\\Restrict-MachineType\\pass\\tfplan-functions",
+			"source": "../../tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "C:/Program Files/Terraform/Terraform-Sentinel/Restrict-MachineType/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test\\Restrict_MachineType\\fail\\tfplan-functions",
+			"source": "../../tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "C:/Program Files/Terraform/Terraform-Sentinel/Restrict-MachineType/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test\\restrict-vpc-sharing\\pass\\tfplan-functions",
+			"source": "../../tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "C:/Program Files/Terraform/Terraform-Sentinel/restrict-vpc-sharing/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test\\Restrict_MachineType\\pass\\tfplan-functions",
+			"source": "../../tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "C:/Program Files/Terraform/Terraform-Sentinel/Restrict-MachineType/tfplan-functions.sentinel"
+		}
+	]
+}

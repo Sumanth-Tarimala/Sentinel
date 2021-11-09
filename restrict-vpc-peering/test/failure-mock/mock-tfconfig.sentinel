@@ -97,71 +97,20 @@ _modules = {
 			},
 		},
 		"resources": {
-			"google_compute_instance": {
-				"default": {
+			"google_compute_network": {
+				"vpc_network": {
 					"config": {
-						"boot_disk": [
-							{
-								"initialize_params": [
-									{
-										"image": "debian-cloud/debian-9",
-									},
-								],
-							},
-						],
-						"machine_type": "e2-medium",
-						"metadata": {
-							"foo": "bar",
-						},
-						"name": "test",
-						"network_interface": [
-							{
-								"access_config": [
-									{},
-								],
-								"network": "default",
-							},
-						],
-						"scratch_disk": [
-							{
-								"interface": "SCSI",
-							},
-						],
-						"tags": [
-							"foo",
-							"bar",
-						],
-						"zone": "us-central1-a",
+						"auto_create_subnetworks": true,
+						"mtu":     1460,
+						"name":    "vpc-network",
+						"project": "my-project-name",
 					},
 					"provisioners": null,
 					"references": {
-						"boot_disk": [
-							{
-								"initialize_params": [
-									{
-										"image": [],
-									},
-								],
-							},
-						],
-						"machine_type": [],
-						"metadata":     [],
-						"name":         [],
-						"network_interface": [
-							{
-								"access_config": [
-									{},
-								],
-								"network": [],
-							},
-						],
-						"scratch_disk": [
-							{
-								"interface": [],
-							},
-						],
-						"tags": [],
-						"zone": [],
+						"auto_create_subnetworks": [],
+						"mtu":     [],
+						"name":    [],
+						"project": [],
 					},
 				},
 			},
@@ -187,7 +136,7 @@ _modules = {
 				"description": "The name prefix for the database instance. Will be appended with a random string. Use lowercase letters, numbers, and hyphens. Start with a letter.",
 			},
 			"project": {
-				"default":     "Sumanth6798",
+				"default":     "Sumanth5454",
 				"description": "The project ID to host the database in.",
 			},
 			"region": {
